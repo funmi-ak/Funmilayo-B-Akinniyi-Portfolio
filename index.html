@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Funmilayo Akinniyi — Microsoft Certified Power BI Data Analyst</title>
+<title>Funmilayo Akinniyi . Microsoft Certified Power BI Data Analyst</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -377,19 +377,21 @@
     margin-bottom:18px;
   }
   .project-thumb{
-    height:150px;
-    background:
-      linear-gradient(to right, rgba(15,31,61,0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(15,31,61,0.06) 1px, transparent 1px);
-    background-size:18px 18px;
+    display:block;
+    height:190px;
+    overflow:hidden;
     background-color:var(--paper);
-    border:1px dashed var(--border);
-    display:flex;align-items:center;justify-content:center;
-    font-family:'IBM Plex Mono',monospace;
-    font-size:12px;
-    color:var(--slate);
+    border:1px solid var(--border);
     margin-bottom:18px;
   }
+  .project-thumb img{
+    width:100%;height:100%;
+    object-fit:cover;
+    object-position:top;
+    display:block;
+    transition:transform .2s ease;
+  }
+  .project-card:hover .project-thumb img{transform:scale(1.03);}
   .project-card h3{font-size:19px;font-weight:500;}
   .project-card .pdesc{
     font-size:14px;color:var(--slate);margin-top:8px;
@@ -474,10 +476,9 @@
 <section class="hero">
   <div class="grid-bg"></div>
   <div class="wrap hero-inner">
-    <span class="cellref hero-cellref mono">A1</span>
     <h1>Funmilayo Akinniyi</h1>
     <div class="title">Microsoft Certified Power BI Data Analyst Associate</div>
-    <p class="bio">I turn raw, messy data into dashboards and reports people actually use — building Power BI solutions from data modeling and DAX through to the reports that inform business decisions. Microsoft Certified Power BI Data Analyst Associate since 2026.</p>
+    <p class="bio">I turn data into insights, dashboards, and stories that drive better decisions.</p>
     <div class="hero-ctas">
       <a href="Funmilayo_Akinniyi_CV2.1.docx" download="Funmilayo_Akinniyi_CV.docx" class="btn btn-primary">Download CV</a>
       <a href="#contact" class="btn btn-outline">Get in touch</a>
@@ -534,16 +535,29 @@
         <a href="BSc%20Computer%20Science.pdf" target="_blank" rel="noopener" class="btn btn-sm btn-solid-navy">View Certificate</a>
       </div>
     </div>
+
+    <div class="cert-card">
+      <div class="cert-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/><path d="M22 10v6"/></svg>
+      </div>
+      <div class="cert-body">
+        <div class="eyebrow mono">education</div>
+        <div class="name">Master in Data Science</div>
+        <div class="issuer">Nigeria Defense Academy Postgraduate School, Kaduna</div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="about">
   <div class="wrap about-grid">
     <div>
-      <span class="cellref mono">B2</span>
       <h2>About</h2>
-      <p>Funmilayo is a Microsoft Certified Power BI Data Analyst Associate. The focus is on building reliable, well-modeled dashboards — from raw data through to reports that hold up under real business questions.</p>
-      <p>Comfortable across the full BI workflow: cleaning and shaping data in Power Query, building star-schema data models, writing DAX for time intelligence and business logic, and designing reports that are easy for non-technical stakeholders to read and trust.</p>
+      <p>I work with Excel, SQL, Power BI, and data visualization to explore data, uncover patterns, build interactive dashboards, and turn numbers into insights that people can actually use.
+        My journey into data has been driven by curiosity and a desire to solve real-world problems. From analyzing datasets to building business intelligence projects, I’m constantly learning, experimenting, and finding better ways to communicate what the data is saying.
+        This portfolio is a collection of my journey so far, the projects I’ve built, the skills I’ve developed, and the problems I’ve explored through data.
+        I believe good data analysis is not just about numbers. It’s about asking the right questions, finding the story, and making the insights useful.
+      </p>
     </div>
     <div>
       <div class="roles-label mono">roles covered</div>
@@ -563,9 +577,7 @@
 <section id="skills" class="tight" style="background:var(--paper);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
   <div class="wrap">
     <div class="section-head">
-      <span class="cellref mono">C3</span>
       <h2>Skills &amp; tools</h2>
-      <p class="lede">The core toolkit used to move data from raw source to finished report.</p>
     </div>
   </div>
   <div class="wrap" style="padding:0 32px;">
@@ -573,7 +585,7 @@
       <div class="skill-cell">
         <div class="mono">tool / bi</div>
         <div class="sname">Power BI</div>
-        <div class="sdesc">Report design, data modeling, publishing and workspace management.</div>
+        <div class="sdesc">Dashboard development, data modeling, DAX, report design, and data visualization.</div>
       </div>
       <div class="skill-cell">
         <div class="mono">tool / spreadsheets</div>
@@ -582,8 +594,8 @@
       </div>
       <div class="skill-cell">
         <div class="mono">language</div>
-        <div class="sname">DAX</div>
-        <div class="sdesc">Measures, calculated columns, and time-intelligence logic.</div>
+        <div class="sname">SQL</div>
+        <div class="sdesc">Writing queries, joining tables, filtering data, and extracting insights from relational databases.</div>
       </div>
       <div class="skill-cell">
         <div class="mono">tool / etl</div>
@@ -597,26 +609,30 @@
 <section id="projects">
   <div class="wrap">
     <div class="section-head">
-      <span class="cellref mono">D4</span>
       <h2>Projects</h2>
-      <p class="lede">A selection of dashboards and analyses. Placeholder entries — swap in real project details, screenshots, and links.</p>
+      <p class="lede">A selection of Power BI dashboards built to turn raw operational data into decisions.</p>
     </div>
     <div class="projects-grid">
 
       <div class="project-card">
-        <div class="project-thumb">dashboard preview — placeholder</div>
-        <h3>Project title — placeholder</h3>
-        <p class="pdesc">One or two sentences on the business question this dashboard answers and the outcome it drove.</p>
+        <a class="project-thumb" href="projects/WhatsApp%20Image%202026-10-02%20at%2010.04.19.jpeg" target="_blank" rel="noopener">
+          <img src="projects/WhatsApp%20Image%202026-10-02%20at%2010.04.19.jpeg" alt="Academic Performance Intelligence Power BI dashboard">
+        </a>
+        <h3>Academic Performance Intelligence</h3>
+        <p class="pdesc">A Power BI report tracking academic performance across 1.6K students and 15K assessments, breaking down average score and pass rate by subject, class, region, gender, and month to help staff spot underperformance early.</p>
         <div class="tag-row">
           <span class="tag">Power BI</span>
           <span class="tag">DAX</span>
+          <span class="tag">Data Modeling</span>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-thumb">dashboard preview — placeholder</div>
-        <h3>Project title — placeholder</h3>
-        <p class="pdesc">One or two sentences on the business question this dashboard answers and the outcome it drove.</p>
+        <a class="project-thumb" href="projects/WhatsApp%20Image%202026-10-02%20at%2010.08.06.jpeg" target="_blank" rel="noopener">
+          <img src="projects/WhatsApp%20Image%202026-10-02%20at%2010.08.06.jpeg" alt="Ondo State Health Workforce Registry Power BI dashboard">
+        </a>
+        <h3>Ondo State Health Workforce Registry</h3>
+        <p class="pdesc">An interactive registry for Ondo State's health workforce, covering 9,670 staff across cadre, facility level, and LGA, built to help the ministry monitor staffing density, professionalism levels, and age distribution statewide.</p>
         <div class="tag-row">
           <span class="tag">Power BI</span>
           <span class="tag">Power Query</span>
@@ -624,19 +640,23 @@
       </div>
 
       <div class="project-card">
-        <div class="project-thumb">dashboard preview — placeholder</div>
-        <h3>Project title — placeholder</h3>
-        <p class="pdesc">One or two sentences on the business question this dashboard answers and the outcome it drove.</p>
+        <a class="project-thumb" href="projects/WhatsApp%20Image%202026-10-02%20at%2010.24.01.jpeg" target="_blank" rel="noopener">
+          <img src="projects/WhatsApp%20Image%202026-10-02%20at%2010.24.01.jpeg" alt="Emzor Pharmaceutical Employee Dashboard">
+        </a>
+        <h3>Emzor Pharmaceutical Employee Dashboard</h3>
+        <p class="pdesc">An HR analytics dashboard covering 1,470 employees, tracking headcount by role and department alongside training, promotion, and retirement pipelines to support workforce planning decisions.</p>
         <div class="tag-row">
-          <span class="tag">Excel</span>
+          <span class="tag">Power BI</span>
           <span class="tag">DAX</span>
         </div>
       </div>
 
       <div class="project-card">
-        <div class="project-thumb">dashboard preview — placeholder</div>
-        <h3>Project title — placeholder</h3>
-        <p class="pdesc">One or two sentences on the business question this dashboard answers and the outcome it drove.</p>
+        <a class="project-thumb" href="projects/WhatsApp%20Image%202026-10-02%20at%2010.29.05.jpeg" target="_blank" rel="noopener">
+          <img src="projects/WhatsApp%20Image%202026-10-02%20at%2010.29.05.jpeg" alt="Data Professional Survey Breakdown Power BI dashboard">
+        </a>
+        <h3>Data Professional Survey Breakdown</h3>
+        <p class="pdesc">An analysis of a 630-respondent survey of data professionals, breaking down salary by job title, country mix, favorite programming languages, and how happy respondents are with work-life balance and pay against how hard they found it to break into the field.</p>
         <div class="tag-row">
           <span class="tag">Power BI</span>
           <span class="tag">Data Modeling</span>
@@ -650,7 +670,6 @@
 <section id="contact">
   <div class="wrap">
     <div class="section-head">
-      <span class="cellref mono on-dark">E5</span>
       <h2>Contact</h2>
       <p class="lede">Open to Power BI development, consulting, and analyst roles.</p>
     </div>
@@ -662,13 +681,13 @@
           <div class="cval">funmiakinniyi@gmail.com</div>
         </div>
       </a>
-      <a class="contact-item" href="https://github.com/funmi-ak" target="_blank" rel="noopener">
+      <!-- <a class="contact-item" href="https://github.com/funmi-ak" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
         <div>
           <div class="clabel mono">github</div>
           <div class="cval">github.com/funmi-ak</div>
         </div>
-      </a>
+      </a> -->
       <a class="contact-item" href="https://linkedin.com/in/funmi-akinniyi" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
         <div>
