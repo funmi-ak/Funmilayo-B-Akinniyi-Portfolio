@@ -345,6 +345,9 @@
         border-bottom: 1px solid var(--border);
         padding: 44px 0;
       }
+      #education {
+        scroll-margin-top: 68px;
+      }
       .cert-card + .cert-card {
         margin-top: 16px;
       }
@@ -434,6 +437,23 @@
       .btn-solid-navy:hover {
         transform: translateY(-1px);
       }
+      .cert-status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: #23734a;
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+      }
+      .cert-status::before {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #2d9b61;
+        box-shadow: 0 0 0 3px rgba(45, 155, 97, 0.14);
+        content: "";
+      }
       @media (max-width: 560px) {
         .cert-card {
           padding: 24px;
@@ -486,9 +506,8 @@
         font-size: 15.5px;
       }
       .roles-label {
-        font-family: "IBM Plex Mono", monospace;
-        font-size: 12px;
-        color: var(--slate);
+        font-size: 20px;
+        color: var(--navy);
         margin-bottom: 14px;
       }
       .roles-list {
@@ -667,6 +686,7 @@
         <div class="nav-links" id="navLinks">
           <a href="#about">About</a>
           <a href="#certification">Certification</a>
+          <a href="#education">Education</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
@@ -761,22 +781,21 @@
         <div>
           <h2>About</h2>
           <p>
-            I work with Excel, SQL, Power BI, and data visualization to explore
-            data, uncover patterns, build interactive dashboards, and turn
-            numbers into insights that people can actually use. My journey into
-            data has been driven by curiosity and a desire to solve real-world
-            problems. From analyzing datasets to building business intelligence
-            projects, I’m constantly learning, experimenting, and finding better
-            ways to communicate what the data is saying. This portfolio is a
-            collection of my journey so far, the projects I’ve built, the skills
-            I’ve developed, and the problems I’ve explored through data. I
-            believe good data analysis is not just about numbers. It’s about
-            asking the right questions, finding the story, and making the
-            insights useful.
+            I work with Excel, SQL, and Power BI to explore data, uncover hidden
+            patterns, build interactive dashboards, and deliver actionable
+            insights. As a Microsoft Certified Data Analyst with a 300+ day
+            continuous learning streak on Datacamp, my journey into data is
+            fueled by curiosity and a drive to solve real-world problems. From
+            end-to-end data transformation to building business intelligence
+            solutions, I’m constantly experimenting and refining how I
+            communicate findings. This portfolio showcases my projects,
+            methodologies, and technical journey. To me, great data analysis
+            isn't just about numbers, it’s about asking the right questions,
+            discovering the story and making data useful.
           </p>
         </div>
         <div>
-          <div class="roles-label mono">roles covered</div>
+          <h3 class="roles-label">Roles covered</h3>
           <div class="roles-list">
             <span class="role-tag">Financial Analyst</span>
             <span class="role-tag">Business Intelligence Analyst</span>
@@ -792,6 +811,9 @@
 
     <section id="certification" class="cert">
       <div class="wrap">
+        <div class="section-head">
+          <h2>Badges/Certifications</h2>
+        </div>
         <div class="cert-card">
           <div class="cert-icon">
             <svg
@@ -845,70 +867,6 @@
             </svg>
           </div>
           <div class="cert-body">
-            <div class="eyebrow mono">professional certificate</div>
-            <div class="name">Professional Certificate in Data Analytics</div>
-            <div class="issuer">
-              StartechOne Academy · 4-month internship · November 2025
-            </div>
-          </div>
-          <div class="cert-actions">
-            <a
-              href="projects/WhatsApp%20Image%202026-10-19%20at%2020.54.31.jpeg"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-sm btn-solid-navy"
-              >View Certificate</a
-            >
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-            >
-              <path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
-              <path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5" />
-            </svg>
-          </div>
-          <div class="cert-body">
-            <div class="eyebrow mono">program completion</div>
-            <div class="name">
-              Technical Deep Dive Program Cohort 3.0, Data Analysis (Power BI
-              Track)
-            </div>
-            <div class="issuer">
-              She Code Africa Kaduna × Women TechMakers Kaduna City · September
-              2026
-            </div>
-          </div>
-          <div class="cert-actions">
-            <a
-              href="projects/WhatsApp%20Image%202026-10-19%20at%2021.03.43.jpeg"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-sm btn-solid-navy"
-              >View Certificate</a
-            >
-          </div>
-        </div>
-
-        <div class="cert-card">
-          <div class="cert-icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-            >
-              <path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
-              <path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5" />
-            </svg>
-          </div>
-          <div class="cert-body">
             <div class="eyebrow mono">verified credential</div>
             <div class="name">
               Google Data Analytics Professional Certificate
@@ -932,7 +890,14 @@
             >
           </div>
         </div>
+      </div>
+    </section>
 
+    <section id="education" class="cert">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Education</h2>
+        </div>
         <div class="cert-card">
           <div class="cert-icon">
             <svg
@@ -948,10 +913,34 @@
           </div>
           <div class="cert-body">
             <div class="eyebrow mono">education</div>
+            <div class="name">Master in Data Science</div>
+            <div class="issuer">
+              Nigeria Defense Academy Postgraduate School, Kaduna
+            </div>
+          </div>
+          <div class="cert-actions">
+            <span class="cert-status">ONGOING</span>
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" />
+              <path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5" />
+            </svg>
+          </div>
+          <div class="cert-body">
+            <div class="eyebrow mono">education</div>
             <div class="name">
               BSc Computer Science, Ahmadu Bello University Zaria
             </div>
-            <div class="issuer">Ahmadu Bello University, Zaria</div>
+            <div class="issuer">Ahmadu Bello University, Zaria · 2016</div>
           </div>
           <div class="cert-actions">
             <a
@@ -978,11 +967,55 @@
             </svg>
           </div>
           <div class="cert-body">
-            <div class="eyebrow mono">education</div>
-            <div class="name">Master in Data Science</div>
+            <div class="eyebrow mono">professional certificate</div>
+            <div class="name">Professional Certificate in Data Analytics</div>
             <div class="issuer">
-              Nigeria Defense Academy Postgraduate School, Kaduna
+              StartechOne Academy · 4-month internship · November 2025
             </div>
+          </div>
+          <div class="cert-actions">
+            <a
+              href="projects/WhatsApp%20Image%202026-10-19%20at%2020.54.31.jpeg"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-sm btn-solid-navy"
+              >View Certificate</a
+            >
+          </div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+              <path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5" />
+              <path d="M22 10v6" />
+            </svg>
+          </div>
+          <div class="cert-body">
+            <div class="eyebrow mono">program completion</div>
+            <div class="name">
+              Technical Deep Dive Program Cohort 3.0, Data Analysis (Power BI
+              Track)
+            </div>
+            <div class="issuer">
+              She Code Africa Kaduna × Women TechMakers Kaduna City · September
+              2026
+            </div>
+          </div>
+          <div class="cert-actions">
+            <a
+              href="projects/WhatsApp%20Image%202026-10-19%20at%2021.03.43.jpeg"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-sm btn-solid-navy"
+              >View Certificate</a
+            >
           </div>
         </div>
       </div>
